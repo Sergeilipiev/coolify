@@ -335,6 +335,60 @@ All notable changes to this project will be documented in this file.
 - *(CleanupRedis)* Add error handling for JSON decode failures in cleanupStuckJobs method
 - *(CleanupRedis)* Add error handling for JSON decode failures in cleanupStuckJobs method
 - *(ServiceDatabase)* Add support for TimescaleDB detection and database type identification
+- *(proxy)* Upgrade Traefik image to v3.6
+- *(proxy)* Upgrade Traefik image to v3.6 (#7225)
+- *(proxy)* Add Traefik version tracking with notifications and dismissible UI warnings
+- *(proxy)* Enhance Traefik version notifications to show patch and minor upgrades
+- *(proxy)* Trigger version check after restart from UI
+- *(proxy)* Include Traefik versions in version check after restart
+- *(proxy)* Enhance Traefik version notifications (#7247)
+- Auto-create MinIO bucket and validate storage in development
+- Add environment variable autocomplete component
+- Add docker-compose health check examples and github runner migration
+- Improve health status warning messages for unknown and unhealthy states
+- *(tests)* Add comprehensive tests for ContainerStatusAggregator and serverStatus accessor
+- Add validation for YAML parsing, integer parameters, and Docker Compose custom fields
+- Add helper messages for unknown and unhealthy states in running status component
+- Implement formatContainerStatus helper for human-readable status formatting and add unit tests
+- Add compose reload button and raw/deployable toggle
+- Add compose reload button and raw/deployable toggle (#7294)
+- Implement prerequisite validation and installation for server setup
+- Enhance prerequisite validation to return detailed results
+- Add async prerequisite installation with retry logic and visual feedback
+- Implement prerequisite validation and installation for server setup (#7297)
+- Add palworld service (#7206)
+- *(service)* Add newt-pangolin template (#6259)
+- *(opnform)* Add SERVICE_URL_NGINX environment variable to nginx service
+- *(service)* Add Opnform template (#5875)
+- Add S3 storage integration for file import
+- Streamline S3 restore with single-step flow and improved UI consistency
+- *(proxy)* Add Traefik version tracking with notifications and dismissible UI warnings
+- *(proxy)* Enhance Traefik version notifications to show patch and minor upgrades
+- *(proxy)* Trigger version check after restart from UI
+- *(proxy)* Include Traefik versions in version check after restart
+- Improve S3 restore path handling and validation state
+- S3 restore  (#7085)
+- Add environment variable autocomplete component (#7282)
+- Add validation methods for S3 bucket names, paths, and server paths; update import logic to prevent command injection
+- Create migration for webhook notification settings and cloud init scripts tables
+- Update version numbers to 4.0.0-beta.448 and 4.0.0-beta.449
+- Custom docker entrypoint
+- Custom docker entrypoint (#7097)
+- Developer view for shared env variables
+- Make text area larger since its full page
+- Add database transactions and component-level authorization to shared variables
+- Developer view for shared environment variables (#7091)
+- Add support for syncing versions.json to GitHub repository via PR
+- Add Docker build cache preservation toggles and development logging
+- Add Docker build cache preservation toggles (#7352)
+- Add functionality to sync releases.json and versions.json to GitHub in one PR
+- Add availableSharedVariables method and enhance env-var-input component for better password handling
+- Add predefined network connection for pgAdmin and postgresus services
+- Logs color highlight based on log level - visual improvement
+- *(ui)* Logs color highlight based on log level (#7288)
+- Improve new resource selection UI layout and styling
+- Improve trademark policy on new resource page using proper callout component instead of plain text
+- *(ui)* Improve new resource page UI layout and styling (#7291)
 
 ### 🐛 Bug Fixes
 
@@ -822,6 +876,159 @@ All notable changes to this project will be documented in this file.
 - *(proxy)* Update Traefik image version to v3.6 in default proxy configuration
 - *(server)* Wrap complex piped commands in bash -c for sudo execution
 - *(proxy)* Downgrade Traefik image version from v3.6 to v3.5 in default proxy configuration
+- *(versions)* Update coolify version to 4.0.0-beta.444 and nightly to 4.0.0-beta.445
+- *(versions)* Update helper version to 1.0.12
+- Remove PullHelperImageJob and mass server scheduling
+- Remove PullHelperImageJob mass scheduling (#7229)
+- *(deployment)* Eliminate duplicate error logging in deployment methods
+- *(deployment)* Improve error logging with exception types and hidden technical details
+- *(versions)* Update coolify version to 4.0.0-beta.445 and nightly to 4.0.0-beta.446
+- Resolve duplicate migration timestamps and add idempotency guards
+- Remove unnecessary table existence checks in migration files
+- Resolve duplicate migration timestamps (#7254)
+- Eliminate duplicate error logging in deployment methods (#7248)
+- Replace inline styles with Tailwind classes in modal-input component
+- Replace inline styles with Tailwind classes in modal-input (#7267)
+- Remove unused variable in updatedBuildPack method
+- *(performance)* Eliminate N+1 query in CheckTraefikVersionJob
+- *(proxy)* Prevent "container name already in use" error during proxy restart
+- *(proxy)* Remove debugging ray call from Traefik version retrieval
+- Replace inline styles with Tailwind classes in modal-input component
+- Remove unused variable in updatedBuildPack method
+- Inject environment variables into custom Docker Compose build commands
+- Auto-inject environment variables into custom Docker Compose commands
+- Auto-inject -f and --env-file flags into custom Docker Compose commands
+- Normalize preview paths and use BUILD_TIME_ENV_PATH constant
+- Improve -f flag detection to prevent false positives
+- Use stable wire:key values for Docker Compose preview fields
+- Inject environment variables into custom Docker Compose build commands (#7271)
+- Correct status for services with all containers excluded from health checks
+- Correct status for services with all containers excluded from health checks
+- Preserve unknown health state and handle edge case container states
+- Remove deprecated docker-compose example files for health status testing
+- Preserve unknown health status in Sentinel updates (PushServerUpdateJob)
+- Correct Sentinel default health status and remove debug logging
+- Correct status for excluded health check containers (#7283)
+- Eliminate layout shift on input border indicator using box-shadow
+- Eliminate input border layout shift with box-shadow (#7300)
+- Don't show health status for exited containers
+- Don't show health status for exited containers (#7317)
+- Properly handle SERVICE_URL and SERVICE_FQDN for abbreviated service names (#7243)
+- Handle map-style environment variables in updateCompose
+- Clean up formatting and indentation in global-search.blade.php
+- Initialize Collection properties to handle queue deserialization edge cases
+- Enhance getRequiredPort to support map-style environment variables for SERVICE_URL and SERVICE_FQDN
+- Remove dead conditional and unused variables in parsers.php
+- Convert Stringable to plain strings in applicationParser for strict comparisons and collection lookups
+- Comprehensive SERVICE_URL/SERVICE_FQDN handling improvements and queue reliability fixes (#7275)
+- *(service)* Plausible compose parsing error
+- *(service)* Plausible compose parsing error (#7244)
+- *(service)* Netbird client showing wrong host details  (#7237)
+- *(service)* Ghost using invalid base url
+- *(service)* Ghost using invalid base url (#7233)
+- Default template of Redis Insight (#7176)
+- Updated passout key
+- Updated envs
+- Secure deploy
+- Secure deploy
+- Secure deploy
+- Updated postgres
+- Codimd docker-compose domain
+- *(opnform)* Update APP_URL environment variable and remove unused nginx environment variable
+- Update sentinel version to 0.0.18
+- Update coolify version to 4.0.0-beta.446 and nightly version to 4.0.0-beta.447
+- Handle existing cloud_init_scripts table in migration
+- Handle existing webhook_notification_settings table in migration
+- Handle migration rename errors for v444→v445 upgrades (#7320)
+- Update coolify version to 4.0.0-beta.447 and nightly version to 4.0.0-beta.448
+- Prevent divide-by-zero in env-var autocomplete navigation
+- S3 restore button disabled state and security scopes
+- S3 download and database restore output showing same content
+- Conditionally render activity monitors to prevent output conflicts
+- Ensure S3 download message hides when download finishes
+- Use x-show for activity monitors to enable reactive visibility
+- Add updatedActivityId watcher to ActivityMonitor component
+- Revert to original dispatch approach with unique wire:key per monitor
+- Use x-show for S3 download message to hide reactively on completion
+- Add missing formatBytes helper function
+- Create S3 event classes and add formatBytes helper
+- Correct event class names in callEventOnFinish
+- Broadcast S3DownloadFinished event to hide download message
+- Broadcast S3DownloadFinished to correct user
+- Only set s3DownloadedFile when download actually completes
+- Remove blocking instant_remote_process and hide button during download
+- Use server-side @if instead of client-side x-show for activity monitor
+- Streamline helper version retrieval and improve migration clarity
+- Improve robustness and security in database restore flows
+- *(security)* Mitigate path traversal vulnerability in S3RestoreJobFinished
+- Replace inline styles with Tailwind classes in modal-input component
+- Remove unused variable in updatedBuildPack method
+- Remove unused variable in updatedBuildPack method
+- *(performance)* Eliminate N+1 query in CheckTraefikVersionJob
+- *(proxy)* Prevent "container name already in use" error during proxy restart
+- *(proxy)* Remove debugging ray call from Traefik version retrieval
+- Remove unused variable in updatedBuildPack method
+- Inject environment variables into custom Docker Compose build commands
+- Auto-inject environment variables into custom Docker Compose commands
+- Auto-inject -f and --env-file flags into custom Docker Compose commands
+- Normalize preview paths and use BUILD_TIME_ENV_PATH constant
+- Improve -f flag detection to prevent false positives
+- Use stable wire:key values for Docker Compose preview fields
+- Correct webhook notification settings migration and model
+- Update webhook notification settings migration to use updateOrInsert and add logging
+- Prevent overwriting existing webhook notification settings during migration
+- Correct webhook notification settings migration and model (#7333)
+- Preserve Docker build cache by excluding dynamic variables from build-time contexts
+- Preserve Docker build cache by excluding dynamic variables (#7339)
+- Handle escaped quotes in docker entrypoint parsing
+- Dispatch success message after transaction commits
+- Show shared env scopes dropdown even when no variables exist
+- Show shared env scopes dropdown even when no variables exist (#7342)
+- Add authorization checks for environment and project views
+- Update version numbers to 4.0.0-beta.449 and 4.0.0-beta.450
+- Update version number to 4.0.0-beta.450
+- Resolve uncloseable database restore modal on MariaDB import (#7335)
+- Resolve uncloseable database restore modal (#7345)
+- Add -L flag to curl commands for CDN redirects
+- Add -L flag to curl commands for CDN redirects (#7349)
+- Add bash control structure keywords to sudo command processing
+- Add bash control structure keywords to sudo processing (#7353)
+- Update coolify version numbers to 4.0.0-beta.450 and 4.0.0-beta.451
+- Update version numbers to 4.0.0-beta.451 and 4.0.0-beta.452
+- Resolve Docker validation race conditions and sudo prefix bug
+- Resolve Docker validation race conditions and sudo prefix bug (#7368)
+- Ensure syncData is called with both true and false parameters in submit method
+- Update environment variable form to use consistent naming and improve checkbox logic
+- Log warning on backup failure during name cleanup process
+- Improve error handling and output capturing during Git operations in SyncBunny command
+- Add additional bash keywords to prevent sudo prefix in command parsing
+- Conditionally enable buildtime checkbox based on environment type
+- Prevent SERVICE_FQDN/SERVICE_URL path duplication on FQDN updates
+- Prevent SERVICE_FQDN/SERVICE_URL path duplication (#7370)
+- Trigger configuration changed detection for build settings
+- Trigger configuration changed detection for build settings (#7371)
+- Enhance security by validating and escaping database names, file paths, and proxy configuration filenames to prevent command injection
+- Enhance validation for database names and filenames to prevent command injection
+- Enhance security by validating and escaping database names, file paths, and proxy configuration filenames (#7375)
+- *(docker)* Migrate database start actions from --time to -t flag
+- *(docker)* Migrate database start actions from --time to -t flag (#7388)
+- *(docker)* Migrate database start actions from --time to -t flag
+- Prevent Livewire snapshot error in database restore modal
+- Prevent Livewire snapshot error in database restore (#7385)
+- Update service creation logic to only connect pgAdmin to Docker network
+- *(ui)* Incorrect caddy proxy config file path on proxy page (#6722)
+- Add support for nixpacks plan variables in buildtime environment
+- Prevent duplicate environment variables in buildtime.env
+- Prevent duplicate environment variables in buildtime.env and support nixpacks plan variable overrides (#7373)
+- *(docker)* Replace deprecated --time flag with -t for full compatibility across Docker versions (#6807)
+- Improved regex to support timestamps with either "T" or space separators on logs to differentiate timestamps from actual log content
+- *(docker)* Migrate database start actions from --time to -t flag (#7390)
+- Search bar floating on new resource page
+- Add missing yellow border for search box focus in dark mode for new resource page
+- Remove redundant condition for displaying databases in resource selection
+- Update border color utility for input-sticky-active and coolbox components
+- Resolve webhook notification settings migration conflict
+- Resolve webhook notification settings migration conflict (#7393)
 
 ### 💼 Other
 
@@ -851,6 +1058,27 @@ All notable changes to this project will be documented in this file.
 - *(deps-dev)* Bump vite from 6.3.6 to 6.4.1
 - Change category from 'media' to 'analytics'
 - Change category from 'media' to 'analytics'
+- Merge next branch into feat-traefik-version-checker
+- Add comprehensive status change logging
+- Add detailed Sentinel container processing logging
+- *(Documenso)* Resolve pending status issue for Documenso deployments (fixes #1767)
+- *(Documenso)* Resolve pending status issue for Documenso deployments (fixes #1767)
+- Codimd Service docker-compose (#7096)
+- Add ray logging to trace S3DownloadFinished event flow
+- Minimize logging in cleanup commands
+- Minimize logging in cleanup commands (#7356)
+- (service) Add postgresus to predefined docker networks by default (#7367)
+- (service) Appwrite too many redirects error (#7364)
+- (service) Beszel realtime feature not working (#7366)
+- Prevent version downgrades and centralize CDN configuration (#7383)
+- Version downgrade prevention - validate cache and add running version checks
+- Version downgrade prevention with cache validation (#7396)
+- Traefik proxy startup issues - handle null versions and filter predefined networks
+- Centralize service application prerequisites
+- Fragile service name parsing in applyServiceApplicationPrerequisites
+- Fragile service name parsing with hyphens (#7399)
+- Traefik proxy startup issues (#7400)
+- Adjust badge positioning and enhance coolbox utility styles
 
 ### 🚜 Refactor
 
@@ -1117,6 +1345,33 @@ All notable changes to this project will be documented in this file.
 - *(DatabaseBackupJob)* Remove retry attempts and backoff logic for job execution
 - *(CleanupRedis)* Optimize key retrieval in cleanupStuckJobs using Redis scan
 - *(CleanupRedis)* Remove JSON decode error handling from cleanupStuckJobs method
+- Move buildpack cleanup logic to model lifecycle hooks
+- Simplify environment variable deletion logic in booted method
+- Move buildpack cleanup to model lifecycle hooks (#7268)
+- *(proxy)* Implement parallel processing for Traefik version checks
+- *(proxy)* Implement centralized caching for versions.json and improve UX
+- *(proxy)* Simplify getNewerBranchInfo method parameters and streamline version checks
+- Move buildpack cleanup logic to model lifecycle hooks
+- Simplify environment variable deletion logic in booted method
+- *(navbar)* Clean up HTML structure and improve readability
+- *(CheckTraefikVersionForServerJob)* Remove unnecessary onQueue assignment in constructor
+- *(migration)* Remove unnecessary index on team_id in cloud_init_scripts table
+- Send immediate Traefik version notifications instead of delayed aggregation
+- Standardize Service model status aggregation to use ContainerStatusAggregator
+- Use Laravel route() helper for shared variable URLs
+- Move buildpack cleanup logic to model lifecycle hooks
+- Simplify environment variable deletion logic in booted method
+- Simplify environment variable deletion logic in booted method
+- *(proxy)* Implement parallel processing for Traefik version checks
+- *(proxy)* Implement centralized caching for versions.json and improve UX
+- *(proxy)* Simplify getNewerBranchInfo method parameters and streamline version checks
+- Simplify environment variable deletion logic in booted method
+- *(navbar)* Clean up HTML structure and improve readability
+- *(CheckTraefikVersionForServerJob)* Remove unnecessary onQueue assignment in constructor
+- *(migration)* Remove unnecessary index on team_id in cloud_init_scripts table
+- Send immediate Traefik version notifications instead of delayed aggregation
+- Fix variable scope in docker entrypoint parsing
+- Fix variable scope in docker entrypoint parsing (#7341)
 
 ### 📚 Documentation
 
@@ -1191,10 +1446,16 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - Update changelog
+- Update changelog
+- Consolidate AI documentation into .ai/ directory
+- Consolidate AI documentation into .ai/ directory (#7274)
+- Add comprehensive container status monitoring system documentation
+- Replace brittle line number references with maintainable method descriptions
 
 ### ⚡ Performance
 
 - *(nginx)* Increase client body buffer size to 256k for Sentinel payloads
+- Optimize S3 restore flow with immediate cleanup and progress tracking
 
 ### 🎨 Styling
 
@@ -1214,6 +1475,7 @@ All notable changes to this project will be documented in this file.
 - Add unit tests for ServerPatchCheck notification URL generation
 - Fix ServerPatchCheckNotification tests to avoid global state pollution
 - Add unit tests for Dockerfile ARG insertion logic
+- Add tests for shared environment variable spacing and resolution
 
 ### ⚙️ Miscellaneous Tasks
 
@@ -1329,6 +1591,13 @@ All notable changes to this project will be documented in this file.
 - *(workflows)* Refactor build-push jobs to use matrix strategy for multi-architecture support
 - Remove outdated testing guide for scheduled tasks
 - Remove unused reviews configuration from coderabbit.yaml
+- Better structure of readme
+- Better structure of readme (#6994)
+- Remove accidentally committed github runner migration
+- *(n8n)* Upgrade n8n image version to 1.119.2 in compose templates
+- *(n8n)* Upgrade n8n image version to 1.119.2 in compose templates (#7236)
+- Better structure of readme
+- Update migration timestamp to 2025_11_26_124200
 
 ### ◀️ Revert
 
